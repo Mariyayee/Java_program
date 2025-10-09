@@ -1,0 +1,96 @@
+//1.Identify the Nature of a Number
+
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+    Scanner sc=new Scanner(System.in);
+    int a=sc.nextInt();
+    if(a==0){
+      System.out.println("ZERO");
+    }else if(a>0){
+      System.out.println("POSITIVE");
+    }else{
+      System.out.println("NEGATIVE");
+    }
+  }
+}
+
+//2. Explore Math Functions
+
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+    Scanner sc=new Scanner(System.in);
+    double a=sc.nextDouble();
+    int b=sc.nextInt();
+    int c=sc.nextInt();
+    int d=sc.nextInt();
+    System.out.println((int)Math.floor(a));
+    System.out.println((int)Math.ceil(a));
+    System.out.println((int)Math.round(a));
+    System.out.println((int)Math.sqrt(b));
+    System.out.println((int)Math.pow(c,d));
+  }
+}
+
+//3.Smallest of Four Numbers
+
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+    Scanner sc=new Scanner(System.in);
+    int a=sc.nextInt();
+    int b=sc.nextInt();
+    int c=sc.nextInt();
+    int d=sc.nextInt();
+    if(a<b && a<c && a<d){
+      System.out.println(a);
+    }else if(b<a && b<c && b<d){
+      System.out.println(b);
+    }else{
+      System.out.println(c);
+    }
+  }
+}
+
+//4.Truncate to Two Decimal Places
+
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+    Scanner sc=new Scanner(System.in);
+    double a=sc.nextDouble();
+    double truncated=(int)(a*100)/100.0;
+    System.out.printf("%.2f\n",truncated);
+  }
+}
+
+//5.Find Second Maximum Number
+
+import java.util.Scanner;
+
+public class SecondLargest {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int a = scanner.nextInt();
+        int b = scanner.nextInt();
+        int c = scanner.nextInt();
+        if (a == b && b == c) {
+            System.out.println("No second max");
+        } 
+        else {
+            int secondMax;
+            if ((a > b && a < c) || (a > c && a < b)) {
+                secondMax = a;
+            } 
+            else if ((b > a && b < c) || (b > c && b < a)) {
+                secondMax = b;
+            } 
+            else {
+                secondMax = c;
+            }
+            System.out.println(secondMax);
+        }
+        scanner.close();
+    }
+}
