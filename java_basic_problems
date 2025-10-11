@@ -94,3 +94,116 @@ public class SecondLargest {
         scanner.close();
     }
 }
+
+//6.Triangle angle validation
+
+import java.util.Scanner;
+public class TriangleType {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int A = scanner.nextInt();
+        int B = scanner.nextInt();
+        int C = scanner.nextInt();
+        if (A + B + C == 180 && A > 0 && B > 0 && C > 0) {
+            System.out.println("VALID");
+            if (A == B && B == C) {
+                System.out.println("EQUILATERAL");
+            } else if (A == B || B == C || A == C) {
+                System.out.println("ISOSCELES");
+            } else {
+                System.out.println("SCALENE");
+            }
+        } else {
+            System.out.println("NOT VALID");
+        }
+
+        scanner.close();
+    }
+}
+
+
+//7. Number to word
+
+import java.util.Scanner;
+public class NumberToWord {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int n = scanner.nextInt();
+        String word;
+        switch (n) {
+            case 0: word = "zero"; break;
+            case 1: word = "one"; break;
+            case 2: word = "two"; break;
+            case 3: word = "three"; break;
+            case 4: word = "four"; break;
+            case 5: word = "five"; break;
+            case 6: word = "six"; break;
+            case 7: word = "seven"; break;
+            case 8: word = "eight"; break;
+            case 9: word = "nine"; break;
+            default: word = "Invalid input"; break;
+        }
+        System.out.println(word);
+        scanner.close();
+    }
+}
+
+//8.Vowel or Consonant
+
+import java.util.Scanner;
+public class VowelOrConsonant {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        char ch = scanner.next().charAt(0);
+        char lowerCh = Character.toLowerCase(ch);
+        if (lowerCh == 'a' || lowerCh == 'e' || lowerCh == 'i' || lowerCh == 'o' || lowerCh == 'u') {
+            System.out.println("vowel");
+        } else {
+            System.out.println("consonant");
+        }
+        scanner.close();
+    }
+}
+
+//9.Leap Year Checker
+
+import java.util.Scanner;
+public class LeapYearCheck {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int year = scanner.nextInt();   
+        if ((year % 400 == 0) || (year % 4 == 0 && year % 100 != 0)) {
+            System.out.println("yes");
+        } else {
+            System.out.println("no");
+        }
+        scanner.close();
+    }
+}
+
+//10.Fun Grade Calculator
+
+import java.util.Scanner;
+public class FunGrade {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int total = 0;
+        for (int i = 0; i < 5; i++) {
+            int mark = scanner.nextInt();
+            total += mark;
+        }
+        double average = total / 5.0;
+        if (average >= 90) {
+            System.out.println("Excellent!");
+        } else if (average >= 80) {
+            System.out.println("Great Job!");
+        } else if (average >= 70) {
+            System.out.println("Good Effort!");
+        } else if (average >= 50) {
+            System.out.println("Keep Trying!");
+        } else {
+            System.out.println("Better Luck Next Time!");
+        }
+        scanner.close();
+    }
+}
