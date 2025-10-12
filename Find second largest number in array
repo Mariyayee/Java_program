@@ -1,0 +1,37 @@
+public class Main
+{
+	public static void main(String[] args) {
+    int[] arr1={4,5,2,3,1};
+    int[] arr2={};
+    int[] arr3={5,5,5};
+    int[] arr4={5,5,4};
+    int[] arr5={-1,-1,-2,10,10};
+    int[] arr6={-1,-1,-1};
+    System.out.println(findSecondLargestNumber(arr1));
+    System.out.println(findSecondLargestNumber(arr2));
+    System.out.println(findSecondLargestNumber(arr3));
+    System.out.println(findSecondLargestNumber(arr4));
+    System.out.println(findSecondLargestNumber(arr5));
+    System.out.println(findSecondLargestNumber(arr6));
+	}
+	private static int findSecondLargestNumber(int[] arr){
+	    if(arr.length==0 || arr.length==1){
+	        return -1;
+	    }
+	    int max=Integer.MIN_VALUE;
+	    int secondmax=Integer.MIN_VALUE;
+	    for(int num:arr){
+	        if(max<num){
+	            secondmax=max;
+	            max=num;
+	        }
+	        else if(secondmax<num && num!=max){
+	            secondmax=num;
+	        }
+	    }
+	    if(secondmax==Integer.MIN_VALUE){
+	        return max;
+	    }
+	    return secondmax;
+	}
+}
